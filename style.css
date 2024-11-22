@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #000000, #6a0dad); /* Fondo inicial de gradiente */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-attachment: fixed; /* Fijar el fondo al hacer scroll */
+    transition: background 0.5s ease-in-out; /* Transición suave para cambiar el fondo */
+}
+
+h1 {
+    margin: 0; /* Eliminamos márgenes adicionales */
+    padding: 20px; /* Añadimos algo de espacio alrededor del título */
+    text-align: center; /* Aseguramos que el texto dentro del h1 esté centrado */
+    color:whitesmoke;
+}
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las columnas con espacio entre ellas */
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho del contenedor */
+    padding: 20px;
+}
+
+/* Estilo de las columnas */
+.column {
+    background-color: violet;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Cada columna ocupa el 30% del ancho */
+    text-align: center;
+}
+
+/* Imagen dentro de las columnas */
+.column img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer; 
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-20px); /* Inicialmente desplazado */
+    transition: opacity 0.5s, transform 0.5s ease-out; /* Transición suave */
+}
+
+/* Video de YouTube dentro de las columnas */
+.column .video iframe {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.new-title {
+    margin-top: 40px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.new-description {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 1000px;
+    color: whitesmoke;
+}
+
+/* Contenedor para las columnas con scroll */
+.scroll-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Estilo de las columnas con scroll */
+.scroll-column {
+    background-color: blueviolet;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 200px; /* Altura fija para permitir scroll */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    text-align: left;
+}
+
+/* Títulos dentro de las columnas con scroll */
+.scroll-column h3 {
+    margin-top: 0;
+}
+
